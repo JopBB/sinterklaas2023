@@ -25,7 +25,7 @@ navigator.mediaDevices.getUserMedia({
       analyser.getByteFrequencyData(array);
       const arraySum = array.reduce((a, value) => a + value, 0);
       const average = arraySum / array.length;
-      const geluid = Math.round(average*2) 
+      const geluid = Math.round(average) 
       colorPids(geluid);
       console.log(geluid);
        if(geluid>=60){
