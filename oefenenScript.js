@@ -1,6 +1,7 @@
 mediumGeluidGehoord = false;
 hardGeluidGehoord = false;
 currentSpeechPart = 0;
+langGenoegGeluisterd = 0;
 speechPart = {};
 opdracht=[];
 fillOpdracht();
@@ -32,9 +33,13 @@ navigator.mediaDevices.getUserMedia({
       colorPids(geluid);
        if(geluid>=60){
         hardGeluidGehoord=true;
-        showWhenTooSoft.css("display", "none");
-        showWhenLittleBitOfSound.css("display", "none");
-		    showWhenHardEnough.css("display", "inline-block");
+        langGenoegGeluisterd++;
+        console.log(langGenoegGeluisterd)
+        if(langGenoegGeluisterd>50){
+          showWhenTooSoft.css("display", "none");
+          showWhenLittleBitOfSound.css("display", "none");
+  		    showWhenHardEnough.css("display", "inline-block");
+        }
        }else if(geluid >= 20 && !hardGeluidGehoord){
         mediumGeluidGehoord=true;
         setTimeout(function(){ 
@@ -91,6 +96,7 @@ function loadSpeechPart(){
     showWhenLittleBitOfSound.css("display", "none");
     showWhenHardEnough.css("display", "none");
     showWhenTooSoft.css("display", "none");
+    langGenoegGeluisterd=0;
     fillOpdracht();
   }else{
     alert("van harte gefeliciteerd! Je hebt goed genoeg geoefend!")
