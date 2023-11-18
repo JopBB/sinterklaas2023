@@ -1,0 +1,397 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #f5f7fa;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+.container {
+	display: flex;
+}
+.side {
+	min-width: 320px;
+	height: 200px;
+	background-color: #fff;
+	height: 100%;
+	min-height: 100vh;
+	border-right: 1px solid #e1e1e1;
+}
+.content {
+	width: 100%;
+	display: flex;
+	padding: 20px 0;
+	align-items: center;
+	flex-direction: column;
+}
+.side .header {
+	background: linear-gradient(262deg, #ff7854, #fd267d);
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.side .header .avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid #fff;
+	box-shadow: 0 1px 8px 0 rgba(0, 20, 20, 0.2);
+}
+
+.side .header .title {
+	padding: 0 10px;
+	color: #fff;
+	font-size: 23px;
+}
+
+.side .menu ul {
+	display: flex;
+	padding: 0 20px;
+}
+
+.side .menu ul li {
+	list-style: none;
+	margin: 0 10px;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+.side .menu .active {
+	border-bottom: 3px solid #fd5068;
+	padding-bottom: 2px;
+}
+
+.side .messages {
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	transition: 0.2s box-shadow;
+}
+
+.side .messages .avatar img {
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+}
+
+.side .messages .user {
+	padding: 0 10px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+}
+
+.side .messages .text {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 10px;
+	font-weight: 300;
+	font-size: 15px;
+	opacity: 0.8;
+}
+
+.side .messages:hover {
+	box-shadow: 0 0 15px 0 rgba(43, 78, 78, 0.1);
+	border-right: 5px solid #fd5068;
+}
+
+.container .card {
+	position: relative;
+	height: 500px;
+}
+
+.content .card .user {
+	width: 380px;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.5);
+}
+
+.content .card .user .profile {
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	width:100%;
+}
+
+
+.content .card .user .name {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-shadow: 1px 1px 5px #444;
+}
+
+.content .card .user .name span {
+	font-size: 26px;
+}
+
+#francienNaam{
+	color: #222;
+	font-size: 32px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border-bottom: 1px solid grey;
+
+}
+
+.content .card .local {
+	display: flex;
+	align-items: center;
+	padding: 0 0 20px 0;
+}
+
+.content .card .local i {
+	margin: 5px 0;
+	color: #fff;
+}
+
+.content .card .local span {
+	color: #fff;
+	padding: 0 10px;
+	text-shadow: 1px 1px 5px #444;
+}
+
+.card2, .card3, .card4 {
+	display:none;
+}
+
+.backArrow{
+	position: absolute;
+	top:30px;
+	font-size:20pt;
+}
+
+
+.nope1, .nope2, .nope3, .like{
+	position: absolute;
+	display: none;
+}
+
+.avatar{
+	width:50px;
+	height:50px;
+	margin:auto;
+}
+
+.useravatar{
+	width:100%;
+	height:100%;
+	border-radius:50%;
+}
+
+.header{
+	width:100%;
+	height:70px;
+	border-bottom:1px solid grey;
+}
+
+.content .card .extrainfo {
+	position: absolute;
+	bottom:0;
+	right:20px;
+	padding: 0 0 20px 0;
+}
+
+.content .card .extrainfo i {
+	margin: 5px 0;
+	color: #fff;
+}
+
+.content .card .extrainfo span {
+	color: #fff;
+	padding: 0 10px;
+	text-shadow: 1px 1px 5px #444;
+}
+
+.messageInput{
+	width:100%;
+	display: flex;
+
+}
+
+.messageInput input{
+	width: 80%;
+
+}
+
+.content .buttons {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.content .buttons .no i {
+	color: #fd2e79;
+	font-size: 33px;
+}
+
+.content .buttons .star i {
+	color: #2bb1ff;
+	font-size: 22px;
+}
+
+.content .buttons .heart i {
+	color: #11e298;
+	font-size: 32px;
+}
+
+.content .buttons .no,
+.content .buttons .star,
+.content .buttons .heart {
+	background-color: #fff;
+	width: 70px;
+	height: 70px;
+	box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 70px;
+	margin: 4px;
+	transition: 0.2s transform;
+}
+
+.hartje{
+	position: absolute;
+	top:30px;
+	right:30px;
+	font-size: 20pt;
+}
+
+.content .buttons .no:hover,
+.content .buttons .star:hover,
+.content .buttons .heart:hover {
+	transform: scale(1.1);
+}
+
+.content .buttons .star {
+	width: 60px;
+	height: 60px;
+}
+
+#profielpicture{
+	width:250px;
+	border-radius: 50%;
+}
+
+.imessage {
+	width:100%;
+	height:600px;
+	overflow: auto;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "SanFrancisco";
+  font-size: 1.25rem;
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  padding: 0.5rem 1.5rem;
+}
+
+.imessage p {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.imessage p::before,
+.imessage p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.from-me {
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff; 
+}
+
+p.from-me::before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid #248bf5;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-me::after {
+  background-color: #f5f7fa;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform:translate(-30px, -2px);
+  width: 10px;
+}
+
+p[class^="from-"] {
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+p.from-me ~ p.from-me {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:not(:last-child) {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:last-child {
+  margin-bottom: 0.5rem;
+}
+
+p.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+p.from-them:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #e5e5ea;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-them::after {
+  background-color: #f5f7fa;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+
+/* general styling */
+@font-face {
+  font-family: "SanFrancisco";
+  src:
+    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
+    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
+body {  
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
