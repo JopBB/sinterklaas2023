@@ -31,8 +31,12 @@ body {
 
 h1 {
   width: 100%;
+  text-align: center;
   font-weight: 600;
-  text-align: left;
+}
+
+p{
+  text-align: center;
 }
 
 .top__container {

@@ -1,3 +1,10 @@
+.feedback{
+	width:100%;
+	text-align:center;
+	margin-bottom: 20px;
+	font-size:large;
+}
+
 #showWhenLittleBitOfSound{
 	display: none;
 }
