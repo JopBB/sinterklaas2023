@@ -4,6 +4,7 @@ currentSpeechPart = 0;
 langGenoegGeluisterd = 0;
 speechPart = {};
 opdracht=[];
+
 fillOpdracht();
 navigator.mediaDevices.getUserMedia({
   audio: true,
@@ -34,7 +35,6 @@ navigator.mediaDevices.getUserMedia({
        if(geluid>=60){
         hardGeluidGehoord=true;
         langGenoegGeluisterd++;
-        console.log(langGenoegGeluisterd)
         if(langGenoegGeluisterd>50){
           showWhenTooSoft.css("display", "none");
           showWhenLittleBitOfSound.css("display", "none");
@@ -99,6 +99,6 @@ function loadSpeechPart(){
     langGenoegGeluisterd=0;
     fillOpdracht();
   }else{
-    alert("van harte gefeliciteerd! Je hebt goed genoeg geoefend!")
+    alert("Hoera! Je hebt de test volbracht. Geniet van je cadeau!")
   }
 }
