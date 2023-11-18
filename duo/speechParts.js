@@ -6,7 +6,7 @@ const speechParts = [
   },
   {
     opdrachtPart: "Misschien goed om je collega's te bedanken",
-    antwoordPart: "fijne collega's, dankjulliewel voor het fijne samenwerken",
+    antwoordPart: "fijne collega's, dankjulliewel voor het samenwerken",
     list: ["fijne", "samenwerken", "dankjulliewel", "tompoezen", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
   },
   {

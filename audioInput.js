@@ -54,7 +54,7 @@ navigator.mediaDevices.getUserMedia({
   });
 
 
-  function colorPids(vol) {
+function colorPids(vol) {
   const allPids = [...document.querySelectorAll('.pid')];
   const numberOfPidsToColor = Math.round(vol / 5);
   const pidsToColor = allPids.slice(0, numberOfPidsToColor);
