@@ -26,17 +26,28 @@ function setView(){
   //Print the list of words to origin
   originContainer.innerHTML = '';
   for (let i = 0; i < listOfWords.length; i++) {
-    const wordNode = document.createElement("div");
-    wordNode.textContent = listOfWords[i];
-    wordNode.classList.add("word");
-    wordNode.setAttribute("id", i);
-    wordNode.setAttribute("onClick", "wordClicked(this.id)");
-    originContainer.appendChild(wordNode);
+    createOriginWord(i);
   }
   destinationContainer.innerHTML='';
   speechZin="";
 }
 
+function createOriginWord(wordIndex){
+    const wordNode = document.createElement("div");
+    wordNode.textContent = listOfWords[wordIndex];
+    wordNode.classList.add("word");
+    wordNode.setAttribute("id", wordIndex);
+    wordNode.setAttribute("onClick", "wordClicked(this.id)");
+    originContainer.appendChild(wordNode);
+}
+
+function selectedWordClicked(wordIndex){
+  const wordInDestination = document.getElementById(wordIndex);
+  destinationContainer.removeChild(wordInDestination);
+  createOriginWord(wordIndex);
+  const wordToReplace = listOfWords[wordIndex] + " ";
+  speechZin = speechZin.replace(wordToReplace, '');
+}
 
 function wordClicked(wordIndex){
   const wordInList = document.getElementById(wordIndex);
@@ -48,14 +59,18 @@ function wordClicked(wordIndex){
   wordInDestination.classList.add("word");
   wordInDestination.classList.add("selected");
   wordInDestination.setAttribute('id', wordIndex)
+  wordInDestination.setAttribute("onClick", "selectedWordClicked(this.id)");
   destinationContainer.appendChild(wordInDestination);
 }
 
 function checkSpeechPart(){
+  if(currentSpeechPart===0 && speechZin==""){
+    alert("Hoera! Je hebt een prachtige speech in elkaar gezet. Tijd om te oefenen, en let op je articulatie!")
+    window.location.assign('articuleren.html')
+  }
+
   const zinShouldBe = speechPart.antwoordPart;
-  console.log(zinShouldBe)
-  console.log(speechZin)
-  if(speechZin === zinShouldBe+" "){
+  if(speechZin === zinShouldBe+" " || (currentSpeechPart===0 && speechZin === "lieve allemaal wat fijn dat jullie er zijn ")){
     alert("goed gedaan!");
     currentSpeechPart++;
   }else{

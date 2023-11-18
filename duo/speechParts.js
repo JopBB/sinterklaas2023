@@ -1,17 +1,22 @@
 const speechParts = [
   {
-    opdrachtPart: "Maak de openingszin",
+    opdrachtPart: "Laten we beginnen met een goede openingszin",
     antwoordPart: "lieve allemaal wat fijn dat jullie er allemaal zijn",
-    list: ["lieve", "allemaal", "wat", "ik", "er", "stom", "zijn", "dat", "fijn", "allemaal", "jullie", "vervelend"],
+    list: ["lieve", "wat", "ik", "er", "stom", "zijn", "dat", "fijn","allemaal", "allemaal", "jullie", "vervelend"],
   },
   {
-    opdrachtPart: "This is my wife",
-    antwoordPart: "Este es mi esposa",
-    list: ["Este", "esta", "esposa", "es", "mi", "hermana"],
+    opdrachtPart: "Misschien goed om je collega's te bedanken",
+    antwoordPart: "fijne collega's, dankjulliewel voor het fijne samenwerken",
+    list: ["fijne", "samenwerken", "dankjulliewel", "tompoezen", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
   },
   {
-    opdrachtPart: "My favorite sport is hockey",
-    antwoordPart: "Mi deporte favorito es hockey",
-    list: ["deporte", "favorito", "hockey", "Mi", "es", "Tu"],
+    opdrachtPart: "Je kan wat vertellen over wat je gaat doen na je pensoen?",
+    antwoordPart: "ik ga met Els naar Santiago fietsen",
+    list: ["fietsen", "bridgen", "ga", "ik", "fotograferen", "Santiago", "Els", "met", "veel", "lezen", "naar"],
+  },
+  {
+    opdrachtPart: "ALs laatste dan een goede aflsuiting!",
+    antwoordPart: "dankjulliewel en tot heel snel",
+    list: ["dankjulliewel", "snel", "tot", "heel", "en"],
   },
 ];

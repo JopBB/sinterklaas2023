@@ -1,0 +1,20 @@
+#showWhenLittleBitOfSound{
+	display: none;
+}
+
+#showWhenHardEnough{
+	display: none;
+}
+
+#showWhenTooSoft{
+	display: none;
+}
+
+.pids-wrapper{
+  width: 100%;
+}
+.pid{
+  width: calc(5% - 4px);
+  height: 10px;
+  display: inline-block;
+}
