@@ -1,6 +1,6 @@
 navigator.mediaDevices.getUserMedia({
   audio: true,
-  video: true
+  video: false
 })
   .then(function(stream) {
     const audioContext = new AudioContext();
