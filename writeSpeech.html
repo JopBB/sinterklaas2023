@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		    <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap"
+			rel="stylesheet"
+		/>
+		 <link rel="preconnect" href="https://fonts.googleapis.com">
+   		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  		 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		/>
+		 <link rel="stylesheet" href="duo/styleDuo.css">
+
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		 <script defer src="duo/speechParts.js"></script>
+		 <script defer type="text/javascript" src="duo/speechScriptDuo.js"></script>
+	</head>
+	<body>
+
+		<div class="wrapper">
+        <h1>Maak je speech!</h1>
+        <div class="top__container">
+            <div class="image_text__container">
+                <img src="images/michiel.png">
+                <p id="original__text"></p>
+            </div>
+            <div id="destination__container">
+            </div>
+        </div>
+        <div id="origin__container">
+        </div>
+    </div>
+    <footer>
+        <div class="skip_button" onClick="setView()">RESET</div>
+        <div class="check_button" onCLick="checkSpeechPart()">CHECK</div>
+    </footer>
+
+
+		
+	</body>
+</html>
