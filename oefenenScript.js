@@ -30,7 +30,7 @@ navigator.mediaDevices.getUserMedia({
       analyser.getByteFrequencyData(array);
       const arraySum = array.reduce((a, value) => a + value, 0);
       const average = arraySum / array.length;
-      const geluid = Math.round(average) 
+      const geluid = Math.round(average*4) 
       colorPids(geluid);
        if(geluid>=60){
         hardGeluidGehoord=true;
@@ -48,11 +48,7 @@ navigator.mediaDevices.getUserMedia({
         showWhenTooSoft.css("display", "none");
         showWhenHardEnough.css("display", "none");
         showWhenLittleBitOfSound.css("display", "inline-block");
-       }else if(geluid >= 5 && !mediumGeluidGehoord && !hardGeluidGehoord){
-        showWhenLittleBitOfSound.css("display", "none");
-        showWhenHardEnough.css("display", "none");
-        showWhenTooSoft.css("display", "inline-block");
-       }else if(geluid === 0 && !mediumGeluidGehoord && !hardGeluidGehoord){
+       }else if(geluid >= 1 && !mediumGeluidGehoord && !hardGeluidGehoord){
         showWhenLittleBitOfSound.css("display", "none");
         showWhenHardEnough.css("display", "none");
         showWhenTooSoft.css("display", "inline-block");
@@ -73,8 +69,14 @@ function colorPids(vol) {
     pid.style.backgroundColor = "#e6e7e8";
   }
   for (const pid of pidsToColor) {
-    // console.log(pid[i]);
-    pid.style.backgroundColor = "#69ce2b";
+    var pidNumber = pidsToColor.indexOf(pid);
+    if(pidNumber>12){
+      pid.style.backgroundColor = "red";  
+    }else if(pidNumber>5){
+      pid.style.backgroundColor = "orange";  
+    }else{
+      pid.style.backgroundColor = "#69ce2b";
+    }
   }
 }
 
@@ -99,6 +101,6 @@ function loadSpeechPart(){
     langGenoegGeluisterd=0;
     fillOpdracht();
   }else{
-    alert("Hoera! Je hebt de test volbracht. Geniet van je cadeau!")
+    alert("Hoera! Je hebt je speech helemaal onder de knie. Geniet van je cadeau!")
   }
 }
