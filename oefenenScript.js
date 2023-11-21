@@ -4,6 +4,7 @@ currentSpeechPart = 0;
 langGenoegGeluisterd = 0;
 speechPart = {};
 opdracht=[];
+micAmplifier = 1;
 
 fillOpdracht();
 navigator.mediaDevices.getUserMedia({
@@ -30,7 +31,9 @@ navigator.mediaDevices.getUserMedia({
       analyser.getByteFrequencyData(array);
       const arraySum = array.reduce((a, value) => a + value, 0);
       const average = arraySum / array.length;
-      const geluid = Math.round(average*4) 
+      const geluid = Math.round(average*micAmplifier) 
+      console.log("micamp: " +  micAmplifier)
+      console.log("geluid: " +  geluid)
       colorPids(geluid);
        if(geluid>=60){
         hardGeluidGehoord=true;
@@ -103,4 +106,9 @@ function loadSpeechPart(){
   }else{
     alert("Hoera! Je hebt je speech helemaal onder de knie. Geniet van je cadeau!")
   }
+}
+
+function adjustMicAmplifier(){
+  micAmplifier = prompt('set mic amplifier'); 
+  console.log(micAmplifier)
 }
