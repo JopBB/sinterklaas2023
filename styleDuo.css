@@ -28,6 +28,7 @@ body {
   align-items: flex-start;
   margin-bottom: 5em;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1,h2, h3 {
