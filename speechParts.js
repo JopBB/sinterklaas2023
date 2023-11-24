@@ -11,7 +11,7 @@ const speechParts = [
     antwoordPart1: "fijne collega's, dankjulliewel voor het samenwerken",
     antwoordPart2: "allerliefste collega's, dankjulliewel voor het fijne samenwerken",
     antwoordPart3: "dankjulliewel fijne collega's, voor het samenwerken",
-    list: ["fijne", "samenwerken", "dankjulliewel", "tompoezen", "stroeve", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
+    list: ["fijne", "samenwerken", "dankjulliewel", "jaren", "tompoezen", "stroeve", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
   },
   {
     opdrachtPart: "Je kan wat vertellen over wat je gaat doen na je pensoen?",

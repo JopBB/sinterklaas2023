@@ -45,12 +45,12 @@ navigator.mediaDevices.getUserMedia({
         mediumGeluidGehoord=true;
         setTimeout(function(){ 
           mediumGeluidGehoord=false;
-          hardGeluidGehoord=false;
+          console.log('dat gaat de goede kant op is nu false')
         }, 3000);
         showWhenTooSoft.css("display", "none");
         showWhenHardEnough.css("display", "none");
         showWhenLittleBitOfSound.css("display", "inline-block");
-       }else if(geluid >= 1 && !mediumGeluidGehoord && !hardGeluidGehoord){
+       }else if(geluid >= 0 && !mediumGeluidGehoord && !hardGeluidGehoord){
         showWhenLittleBitOfSound.css("display", "none");
         showWhenHardEnough.css("display", "none");
         showWhenTooSoft.css("display", "inline-block");
