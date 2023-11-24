@@ -64,15 +64,22 @@ function wordClicked(wordIndex){
 }
 
 function checkSpeechPart(){
-  if(currentSpeechPart===0 && speechZin==""){
-    alert("Hoera! Je hebt een prachtige speech in elkaar gezet. Tijd om te oefenen, en let op je articulatie!")
-    window.location.assign('articuleren.html')
-  }
 
-  const zinShouldBe = speechPart.antwoordPart;
-  if(speechZin === zinShouldBe+" " || (currentSpeechPart===0 && speechZin === "lieve allemaal wat fijn dat jullie er zijn ")){
-    alert("goed gedaan!");
+  const zinShouldBe1 = speechPart.antwoordPart1 + " ";
+  const zinShouldBe2 = speechPart.antwoordPart2 + " ";
+  const zinShouldBe3 = speechPart.antwoordPart3 + " ";
+  if(currentSpeechPart===3){
+    if (speechZin===zinShouldBe1 || speechZin===zinShouldBe2 || speechZin === zinShouldBe3 ){
+     alert("Hoera! Je hebt een prachtige speech in elkaar gezet. Tijd om te oefenen, en zoals je net in je gedicht hebt gelezen...:let op je articulatie!")
+      window.location.assign('articuleren.html');
+      break;
+    }
+  } 
+  if(speechZin === zinShouldBe1 || speechZin === zinShouldBe2 || speechZin === zinShouldBe3){
+    alert("Prachtig onderdeel van je speech. Op naar het volgende deel!");
     currentSpeechPart++;
+  }else if(speechZin === "gelukkig tot nooit "){
+    alert("Dat is gemeen! Probeer maar opnieuw...")
   }else{
     alert("dat klopt niet helemaal. Probeer het opnieuw...")
   }

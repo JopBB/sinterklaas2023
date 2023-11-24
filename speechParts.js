@@ -1,22 +1,30 @@
 const speechParts = [
   {
     opdrachtPart: "Laten we beginnen met een goede openingszin",
-    antwoordPart: "lieve allemaal wat fijn dat jullie er allemaal zijn",
+    antwoordPart1: "lieve allemaal wat fijn dat jullie er allemaal zijn",
+    antwoordPart2: "lieve allemaal wat fijn dat jullie er zijn",
+    antwoordPart3: "asdf",
     list: ["lieve", "wat", "ik", "er", "stom", "zijn", "dat", "fijn","allemaal", "allemaal", "jullie", "vervelend"],
   },
   {
     opdrachtPart: "Misschien goed om na de opening je collega's te bedanken",
-    antwoordPart: "fijne collega's, dankjulliewel voor het samenwerken",
-    list: ["fijne", "samenwerken", "dankjulliewel", "tompoezen", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
+    antwoordPart1: "fijne collega's, dankjulliewel voor het samenwerken",
+    antwoordPart2: "allerliefste collega's, dankjulliewel voor het fijne samenwerken",
+    antwoordPart3: "dankjulliewel fijne collega's, voor het samenwerken",
+    list: ["fijne", "samenwerken", "dankjulliewel", "tompoezen", "stroeve", "collega's,", "voor", "de", "het", "allerliefste", "saaie"],
   },
   {
     opdrachtPart: "Je kan wat vertellen over wat je gaat doen na je pensoen?",
-    antwoordPart: "ik ga met Els naar Santiago fietsen",
-    list: ["fietsen", "bridgen", "ga", "ik", "fotograferen", "Santiago", "Els", "met", "veel", "lezen", "naar"],
+    antwoordPart1: "ik ga met Els naar Santiago fietsen",
+    antwoordPart2: "ik ga naar Santiago fietsen met Els",
+    antwoordPart3: "ik ga met Els naar Santiago fietsen en veel lezen",
+    list: ["fietsen", "bridgen", "ga", "ik", "fotograferen", "Santiago", "en", "Els", "met", "veel", "lezen", "naar"],
   },
   {
-    opdrachtPart: "ALs laatste dan een goede aflsuiting!",
-    antwoordPart: "dankjulliewel en tot heel snel",
-    list: ["stom", "dankjulliewel", "snel", "nooit", "tot", "heel", "later", "en"],
+    opdrachtPart: "Als laatste dan een goede aflsuiting!",
+    antwoordPart1: "dankjulliewel en tot heel snel",
+    antwoordPart2: "dankjulliewel en tot snel",
+    antwoordPart3: "dankjulliewel en tot snel",
+    list: ["stom", "dankjulliewel", "nooit", "gelukkig", "snel", "zijn", "nooit", "tot", "heel", "later", "en"],
   },
 ];

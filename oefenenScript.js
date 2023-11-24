@@ -32,8 +32,6 @@ navigator.mediaDevices.getUserMedia({
       const arraySum = array.reduce((a, value) => a + value, 0);
       const average = arraySum / array.length;
       const geluid = Math.round(average*micAmplifier) 
-      console.log("micamp: " +  micAmplifier)
-      console.log("geluid: " +  geluid)
       colorPids(geluid);
        if(geluid>=60){
         hardGeluidGehoord=true;
@@ -47,6 +45,7 @@ navigator.mediaDevices.getUserMedia({
         mediumGeluidGehoord=true;
         setTimeout(function(){ 
           mediumGeluidGehoord=false;
+          hardGeluidGehoord=false;
         }, 3000);
         showWhenTooSoft.css("display", "none");
         showWhenHardEnough.css("display", "none");
@@ -85,7 +84,7 @@ function colorPids(vol) {
 
 function fillOpdracht(){
   speechPart = speechParts[currentSpeechPart];
-  opdracht = speechPart.antwoordPart.split(" ");
+  opdracht = speechPart.antwoordPart1.split(" ");
   const originalText = document.getElementById("original__text");
   originalText.innerHTML = '';
   for (let i = 0; i < opdracht.length; i++) {
@@ -102,9 +101,11 @@ function loadSpeechPart(){
     showWhenHardEnough.css("display", "none");
     showWhenTooSoft.css("display", "none");
     langGenoegGeluisterd=0;
+    hardGeluidGehoord=false;
+    mediumGeluidGehoord=false;
     fillOpdracht();
   }else{
-    alert("Hoera! Je hebt je speech helemaal onder de knie. Geniet van je cadeau!")
+    alert("Hoera! Je hebt je speech helemaal onder de knie. Je hebt wel een cadeautje verdiend!")
   }
 }
 
