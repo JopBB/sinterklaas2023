@@ -72,10 +72,8 @@ function checkSpeechPart(){
     if (speechZin===zinShouldBe1 || speechZin===zinShouldBe2 || speechZin === zinShouldBe3 ){
      alert("Hoera! Je hebt een prachtige speech in elkaar gezet. Tijd om te oefenen, en zoals je net in je gedicht hebt gelezen...:let op je articulatie!")
       window.location.assign('articuleren.html');
-      break;
     }
-  } 
-  if(speechZin === zinShouldBe1 || speechZin === zinShouldBe2 || speechZin === zinShouldBe3){
+  }else if(speechZin === zinShouldBe1 || speechZin === zinShouldBe2 || speechZin === zinShouldBe3){
     alert("Prachtig onderdeel van je speech. Op naar het volgende deel!");
     currentSpeechPart++;
   }else if(speechZin === "gelukkig tot nooit "){
